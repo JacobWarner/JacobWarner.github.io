@@ -7,6 +7,46 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+	border-bottom: 1px dotted rgba(0,0,0,0.7);;
+	cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+	font-size: 11px;
+    visibility: hidden;
+    background-color: #FDFDFD;
+    box-shadow: 0 0px 3px rgba(0,0,0,0.12);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 3px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+	left: 50%;
+	transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #DDD transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
